@@ -201,3 +201,69 @@ body {
 .proyecto-enlace:hover {
     color: var(--acento-bronce);
 }
+/* DISEÑO DE LA SECCIÓN 4: CONTACTO (PIE DE PÁGINA) */
+.seccion-contacto {
+    background-color: var(--texto-negro); /* Fondo negro profundo para autoridad */
+    color: var(--fondo-blanco); /* Letras blancas para contraste */
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+}
+
+.titulo-contacto {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    color: var(--fondo-blanco);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Ajuste para centrar la línea solo en el pie de página */
+.linea-bronce.centro {
+    margin: 0 auto 30px auto; 
+}
+
+.texto-contacto {
+    font-size: 0.95rem;
+    color: #CCCCCC; /* Un gris claro para no fatigar la vista contra el negro */
+    margin-bottom: 50px;
+}
+
+.enlaces-contacto {
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.enlace-footer {
+    color: var(--fondo-blanco);
+    text-decoration: none;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.enlace-footer:hover {
+    color: var(--acento-bronce); /* Al tocar el enlace, se vuelve dorado */
+}
+
+.punto-footer {
+    color: var(--acento-bronce);
+    font-weight: bold;
+}
+
+.firma-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria súper fina y opaca */
+    padding-top: 25px;
+    margin-top: 20px;
+}
+
+.firma-footer p {
+    font-size: 0.75rem;
+    color: #777777; /* Gris oscuro para que la firma sea muy sutil */
+    letter-spacing: 1px;
+}
