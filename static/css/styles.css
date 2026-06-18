@@ -133,3 +133,71 @@ body {
     font-weight: bold;
     margin: 0 8px;
 }
+/* DISEÑO DE LA SECCIÓN 3: ARQUITECTURA DE PRUEBA */
+.seccion-proyectos {
+    background-color: var(--fondo-blanco); /* Volvemos al lienzo blanco para contraste */
+    padding: 80px 20px;
+}
+
+.galeria-minimalista {
+    margin-top: 40px;
+}
+
+.proyecto-item {
+    margin-bottom: 50px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(184, 151, 94, 0.2); /* Línea divisoria muy sutil en bronce */
+}
+
+/* Quita la línea debajo del último proyecto para mantener la limpieza */
+.proyecto-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.proyecto-titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    color: var(--texto-negro);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.proyecto-descripcion {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.proyecto-tecnologias {
+    margin-bottom: 25px;
+}
+
+/* Etiquetas de tecnología minimalistas, solo texto y color */
+.tech-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--acento-bronce);
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+/* Botón de enlace transformado en un texto de revista de alta costura */
+.proyecto-enlace {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texto-negro);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid var(--acento-bronce);
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+}
+
+.proyecto-enlace:hover {
+    color: var(--acento-bronce);
+}
