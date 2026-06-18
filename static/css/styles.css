@@ -1,1 +1,72 @@
+/* PALETA DE COLORES PREMIUM */
+:root {
+    --fondo-crema: #F9F9F6; /* Un blanco roto muy sutil y elegante */
+    --fondo-blanco: #FFFFFF;
+    --texto-negro: #1A1A1A; /* Negro profundo para contraste alto sin cansar la vista */
+    --acento-bronce: #B8975E; /* Un tono dorado/bronce opaco y sofisticado */
+    
+    --fuente-titulos: 'Playfair Display', serif; /* Letra tipo revista */
+    --fuente-textos: 'Montserrat', sans-serif; /* Letra moderna y limpia */
+}
+
+/* RESETEO PARA QUE SE VEA IGUAL EN TODOS LOS CELULARES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-textos);
+    background-color: var(--fondo-crema);
+    color: var(--texto-negro);
+    line-height: 1.6;
+}
+
+/* DISEÑO DE LA SECCIÓN 1: INICIO */
+.hero {
+    height: 100vh; /* Hace que esta sección ocupe el 100% de la pantalla de inicio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--fondo-blanco); /* Empezamos con fondo blanco puro */
+    padding: 20px;
+}
+
+.hero-contenido {
+    max-width: 600px;
+}
+
+.saludo {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 4px; /* Espaciado amplio, secreto del diseño premium */
+    color: var(--acento-bronce);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.nombre {
+    font-family: var(--fuente-titulos);
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--texto-negro);
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.profesion {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.descripcion-corta {
+    font-size: 0.95rem;
+    color: #555555;
+    max-width: 85%;
+    margin: 0 auto; /* Centra el texto perfectamente */
+}
 
