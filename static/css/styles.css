@@ -70,3 +70,66 @@ body {
     margin: 0 auto; /* Centra el texto perfectamente */
 }
 
+/* DISEÑO DE LA SECCIÓN 2: ARQUITECTURA Y HABILIDADES */
+.arquitectura {
+    background-color: var(--fondo-crema); /* El sutil cambio de ritmo visual */
+    padding: 80px 20px; /* Mucho espacio en blanco para respirar */
+}
+
+.contenedor-seccion {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cabecera-seccion {
+    margin-bottom: 25px;
+}
+
+.titulo-seccion {
+    font-family: var(--fuente-titulos);
+    font-size: 2rem;
+    color: var(--texto-negro);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* La fina línea asimétrica que da el toque editorial */
+.linea-bronce {
+    width: 40px;
+    height: 3px;
+    background-color: var(--acento-bronce);
+}
+
+.texto-filosofia {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 50px;
+    text-align: left;
+    line-height: 1.8; /* Un interlineado más amplio es clave en el diseño de lujo */
+}
+
+.contenedor-habilidades {
+    margin-top: 20px;
+}
+
+.subtitulo-habilidades {
+    font-family: var(--fuente-titulos);
+    font-size: 0.9rem;
+    color: var(--texto-negro);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.habilidades-lista {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.punto {
+    color: var(--acento-bronce); /* Los puntos separadores en color bronce */
+    font-weight: bold;
+    margin: 0 8px;
+}
