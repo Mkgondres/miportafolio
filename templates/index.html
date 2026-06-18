@@ -45,6 +45,37 @@
         </div>
     </section>
 
+        <!-- SECCIÓN 3: ARQUITECTURA DE PRUEBA (PROYECTOS) -->
+    <section class="seccion-proyectos" id="proyectos">
+        <div class="contenedor-seccion">
+            
+            <div class="cabecera-seccion">
+                <h2 class="titulo-seccion">Arquitectura de Prueba</h2>
+                <div class="linea-bronce"></div>
+            </div>
+            
+            <div class="galeria-minimalista">
+                <!-- Aquí entra Flask: Clonará este diseño para cada proyecto en tu base de datos -->
+                {% for proyecto in proyectos %}
+                <article class="proyecto-item">
+                    <h3 class="proyecto-titulo">{{ proyecto.titulo }}</h3>
+                    <p class="proyecto-descripcion">{{ proyecto.descripcion }}</p>
+                    
+                    <div class="proyecto-tecnologias">
+                        {% for tech in proyecto.tecnologias %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <!-- El enlace '#'' funciona como un botón inactivo elegante -->
+                    <a href="{{ proyecto.enlace }}" class="proyecto-enlace" target="_blank">Explorar Concepto</a>
+                </article>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+
     
     </body>
 </html>
