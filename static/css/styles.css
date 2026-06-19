@@ -1,15 +1,19 @@
-/* PALETA DE COLORES PREMIUM */
+/* ==========================================================================
+   PORTAFOLIO EDITORIAL PREMIUM - HOJA DE ESTILOS MAESTRA RECONSTRUIDA
+   ========================================================================== */
+
+/* 1. VARIABLES Y CONFIGURACIÓN CROMÁTICA */
 :root {
-    --fondo-crema: #F9F9F6; /* Un blanco roto muy sutil y elegante */
+    --fondo-crema: #F9F9F6; 
     --fondo-blanco: #FFFFFF;
-    --texto-negro: #1A1A1A; /* Negro profundo para contraste alto sin cansar la vista */
-    --acento-bronce: #B8975E; /* Un tono dorado/bronce opaco y sofisticado */
+    --texto-negro: #1A1A1A; 
+    --acento-bronce: #B8975E; 
     
-    --fuente-titulos: 'Playfair Display', serif; /* Letra tipo revista */
-    --fuente-textos: 'Montserrat', sans-serif; /* Letra moderna y limpia */
+    --fuente-titulos: 'Playfair Display', serif; 
+    --fuente-textos: 'Montserrat', sans-serif; 
 }
 
-/* RESETEO PARA QUE SE VEA IGUAL EN TODOS LOS CELULARES */
+/* 2. RESETEO E INTERFAZ BASE (Móvil Primero) */
 * {
     margin: 0;
     padding: 0;
@@ -21,9 +25,22 @@ body {
     background-color: var(--fondo-crema);
     color: var(--texto-negro);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* DISEÑO DE LA SECCIÓN 1: INICIO */
+/* Contenedor global responsivo para el cuerpo de la página */
+.contenedor-seccion {
+    width: 100%;
+    max-width: 650px; /* Ancho ideal para lectura en móviles */
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* ==========================================================================
+   DISEÑO BASE: OPTIMIZADO PARA MÓVILES (PANTALLAS CHICAS)
+   ========================================================================== */
+
+/* SECCIÓN 1: INICIO (HERO) */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -31,29 +48,27 @@ body {
     justify-content: center;
     text-align: center;
     background-color: var(--fondo-blanco);
-    padding: 100px 20px 60px 20px;
+    padding: 80px 20px 40px 20px;
 }
 
 .hero-contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
-    max-width: 600px;
+    gap: 30px;
+    width: 100%;
 }
 
-/* Efecto de levitación */
 .hero-imagen-wrapper {
     animation: flotar 6s ease-in-out infinite;
     cursor: pointer;
 }
 
-/* Recorte en forma de ARCO */
 .hero-foto {
-    width: 220px;
-    height: 300px;
+    width: 200px;
+    height: 270px;
     object-fit: cover;
-    border-radius: 120px 120px 0 0;
+    border-radius: 100px 100px 0 0;
     box-shadow: 0 15px 35px rgba(0,0,0,0.08);
     border-bottom: 4px solid var(--acento-bronce);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -66,37 +81,37 @@ body {
 
 @keyframes flotar {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
+    50% { transform: translateY(-12px); }
     100% { transform: translateY(0px); }
 }
 
 .saludo {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: var(--acento-bronce);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 600;
 }
 
 .nombre {
     font-family: var(--fuente-titulos);
-    font-size: 3.2rem;
+    font-size: 2.6rem;
     font-weight: 700;
     color: var(--texto-negro);
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     line-height: 1.1;
 }
 
 .profesion {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 300;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     letter-spacing: 1px;
 }
 
 .descripcion-corta {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #555555;
     max-width: 90%;
     margin: 0 auto;
@@ -107,16 +122,201 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: var(--acento-bronce);
-    margin-top: 25px;
+    margin-top: 20px;
     font-weight: 600;
 }
 
-/* --- LIGHTBOX (LA FOTO EN GRANDE) --- */
+/* SECCIÓN 2: ARQUITECTURA Y HABILIDADES */
+.arquitectura {
+    background-color: var(--fondo-crema);
+    padding: 70px 20px;
+}
+
+.cabecera-seccion {
+    margin-bottom: 25px;
+}
+
+.titulo-seccion {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    color: var(--texto-negro);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.linea-bronce {
+    width: 40px;
+    height: 3px;
+    background-color: var(--acento-bronce);
+}
+
+.texto-filosofia {
+    font-size: 0.95rem;
+    color: #333333;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.subtitulo-habilidades {
+    font-family: var(--fuente-titulos);
+    font-size: 0.85rem;
+    color: var(--texto-negro);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.habilidades-lista {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.punto {
+    color: var(--acento-bronce);
+    font-weight: bold;
+    margin: 0 6px;
+}
+
+/* SECCIÓN 3: ARQUITECTURA DE PRUEBA (PROYECTOS) */
+.seccion-proyectos {
+    background-color: var(--fondo-blanco);
+    padding: 70px 20px;
+}
+
+.galeria-minimalista {
+    margin-top: 30px;
+}
+
+.proyecto-item {
+    margin-bottom: 45px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(184, 151, 94, 0.2);
+}
+
+.proyecto-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.proyecto-titulo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    color: var(--texto-negro);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.proyecto-descripcion {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.proyecto-tecnologias {
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--acento-bronce);
+    margin-right: 12px;
+    font-weight: 600;
+}
+
+.proyecto-enlace {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texto-negro);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid var(--acento-bronce);
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+.proyecto-enlace:hover {
+    color: var(--acento-bronce);
+}
+
+/* SECCIÓN 4: CONTACTO & FOOTER */
+.seccion-contacto {
+    background-color: var(--texto-negro);
+    color: var(--fondo-blanco);
+    padding: 70px 20px 35px 20px;
+    text-align: center;
+}
+
+.titulo-contacto {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    color: var(--fondo-blanco);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.linea-bronce.centro {
+    margin: 0 auto 25px auto; 
+}
+
+.texto-contacto {
+    font-size: 0.9rem;
+    color: #CCCCCC;
+    margin-bottom: 40px;
+}
+
+.enlaces-contacto {
+    margin-bottom: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.enlace-footer {
+    color: var(--fondo-blanco);
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.enlace-footer:hover {
+    color: var(--acento-bronce);
+}
+
+.punto-footer {
+    color: var(--acento-bronce);
+    font-weight: bold;
+}
+
+.firma-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 15px;
+}
+
+.firma-footer p {
+    font-size: 0.7rem;
+    color: #777777;
+    letter-spacing: 1px;
+}
+
+/* SISTEMA LIGHTBOX */
 .lightbox {
     display: none;
     position: fixed;
     z-index: 9999;
-    padding-top: 80px;
+    padding-top: 60px;
     left: 0;
     top: 0;
     width: 100%;
@@ -129,10 +329,10 @@ body {
     margin: auto;
     display: block;
     max-width: 90%;
-    max-height: 75vh;
+    max-height: 80vh;
     object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
     animation: hacerZoom 0.4s ease;
 }
 
@@ -143,10 +343,10 @@ body {
 
 .cerrar-lightbox {
     position: absolute;
-    top: 20px;
-    right: 35px;
+    top: 15px;
+    right: 25px;
     color: #FFFFFF;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 300;
     cursor: pointer;
     transition: 0.3s;
@@ -157,269 +357,150 @@ body {
 }
 
 
-/* DISEÑO DE LA SECCIÓN 2: ARQUITECTURA Y HABILIDADES */
-.arquitectura {
-    background-color: var(--fondo-crema); /* El sutil cambio de ritmo visual */
-    padding: 80px 20px; /* Mucho espacio en blanco para respirar */
-}
-
-.contenedor-seccion {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.cabecera-seccion {
-    margin-bottom: 25px;
-}
-
-.titulo-seccion {
-    font-family: var(--fuente-titulos);
-    font-size: 2rem;
-    color: var(--texto-negro);
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-/* La fina línea asimétrica que da el toque editorial */
-.linea-bronce {
-    width: 40px;
-    height: 3px;
-    background-color: var(--acento-bronce);
-}
-
-.texto-filosofia {
-    font-size: 1rem;
-    color: #333333;
-    margin-bottom: 50px;
-    text-align: left;
-    line-height: 1.8; /* Un interlineado más amplio es clave en el diseño de lujo */
-}
-
-.contenedor-habilidades {
-    margin-top: 20px;
-}
-
-.subtitulo-habilidades {
-    font-family: var(--fuente-titulos);
-    font-size: 0.9rem;
-    color: var(--texto-negro);
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.habilidades-lista {
-    font-size: 0.95rem;
-    color: #555555;
-    margin-bottom: 30px;
-    line-height: 1.6;
-}
-
-.punto {
-    color: var(--acento-bronce); /* Los puntos separadores en color bronce */
-    font-weight: bold;
-    margin: 0 8px;
-}
-/* DISEÑO DE LA SECCIÓN 3: ARQUITECTURA DE PRUEBA */
-.seccion-proyectos {
-    background-color: var(--fondo-blanco); /* Volvemos al lienzo blanco para contraste */
-    padding: 80px 20px;
-}
-
-.galeria-minimalista {
-    margin-top: 40px;
-}
-
-.proyecto-item {
-    margin-bottom: 50px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgba(184, 151, 94, 0.2); /* Línea divisoria muy sutil en bronce */
-}
-
-/* Quita la línea debajo del último proyecto para mantener la limpieza */
-.proyecto-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.proyecto-titulo {
-    font-family: var(--fuente-titulos);
-    font-size: 1.6rem;
-    color: var(--texto-negro);
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.proyecto-descripcion {
-    font-size: 0.95rem;
-    color: #555555;
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
-
-.proyecto-tecnologias {
-    margin-bottom: 25px;
-}
-
-/* Etiquetas de tecnología minimalistas, solo texto y color */
-.tech-tag {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--acento-bronce);
-    margin-right: 15px;
-    font-weight: 600;
-}
-
-/* Botón de enlace transformado en un texto de revista de alta costura */
-.proyecto-enlace {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--texto-negro);
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px solid var(--acento-bronce);
-    padding-bottom: 3px;
-    transition: color 0.3s ease;
-}
-
-.proyecto-enlace:hover {
-    color: var(--acento-bronce);
-}
-/* DISEÑO DE LA SECCIÓN 4: CONTACTO (PIE DE PÁGINA) */
-.seccion-contacto {
-    background-color: var(--texto-negro); /* Fondo negro profundo para autoridad */
-    color: var(--fondo-blanco); /* Letras blancas para contraste */
-    padding: 80px 20px 40px 20px;
-    text-align: center;
-}
-
-.titulo-contacto {
-    font-family: var(--fuente-titulos);
-    font-size: 2rem;
-    color: var(--fondo-blanco);
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-/* Ajuste para centrar la línea solo en el pie de página */
-.linea-bronce.centro {
-    margin: 0 auto 30px auto; 
-}
-
-.texto-contacto {
-    font-size: 0.95rem;
-    color: #CCCCCC; /* Un gris claro para no fatigar la vista contra el negro */
-    margin-bottom: 50px;
-}
-
-.enlaces-contacto {
-    margin-bottom: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.enlace-footer {
-    color: var(--fondo-blanco);
-    text-decoration: none;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.enlace-footer:hover {
-    color: var(--acento-bronce); /* Al tocar el enlace, se vuelve dorado */
-}
-
-.punto-footer {
-    color: var(--acento-bronce);
-    font-weight: bold;
-}
-
-.firma-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria súper fina y opaca */
-    padding-top: 25px;
-    margin-top: 20px;
-}
-
-.firma-footer p {
-    font-size: 0.75rem;
-    color: #777777; /* Gris oscuro para que la firma sea muy sutil */
-    letter-spacing: 1px;
-}
-/* =========================================
-   DISEÑO ADAPTATIVO PARA PANTALLAS GRANDES (COMPUTADORAS)
-   ========================================= */
+/* ==========================================================================
+   INTERRUPTOR RESPONSIVO: OPTIMIZACIÓN COMPLETA PARA COMPUTADORAS (ESCRITORIO)
+   ========================================================================== */
 @media (min-width: 992px) {
     
-    /* 1. EL INICIO: Lado a Lado */
+    /* REGLA MAESTRA DE ANCHO PARA ESCRITORIO */
+    .contenedor-seccion {
+        max-width: 1140px; /* Expansión total de la arquitectura del sitio */
+        padding: 0 20px;
+    }
+
+    /* SECCIÓN 1: INICIO (Paralelo: Foto Izquierda, Texto Derecha) */
     .hero {
-        text-align: left; /* Quitamos el texto centrado */
+        text-align: left;
+        padding: 120px 0;
     }
-    
+
     .hero-contenido {
-        flex-direction: row; /* Coloca la foto y el texto uno al lado del otro */
-        max-width: 1100px; /* Hacemos el contenedor el doble de ancho */
-        gap: 80px; /* Espacio elegante entre la foto y tu nombre */
+        flex-direction: row; /* Coloca elementos de lado a lado */
         justify-content: space-between;
+        align-items: center;
+        gap: 80px;
     }
-    
+
+    .hero-texto {
+        flex: 1;
+    }
+
     .hero-imagen-wrapper {
-        flex-shrink: 0; /* Evita que la foto se aplaste */
+        flex-shrink: 0;
+        order: 1; /* Mantiene la foto en un costado armónico */
     }
-    
-    /* Hacemos la foto más grande e imponente en PC */
+
     .hero-foto {
-        width: 380px;
-        height: 520px;
-        border-radius: 190px 190px 0 0; /* Ajustamos el arco al nuevo tamaño */
+        width: 360px; /* Dimensión majestuosa para monitores grandes */
+        height: 480px;
+        border-radius: 180px 180px 0 0; /* Escalado perfecto del arco */
     }
-    
-    /* Letras gigantes estilo editorial para escritorio */
+
     .nombre {
-        font-size: 5rem; 
+        font-size: 4.8rem; /* Tipografía monumental tipo revista */
     }
-    
+
     .profesion {
         font-size: 1.4rem;
+        margin-bottom: 30px;
     }
-    
+
     .descripcion-corta {
-        margin: 0; /* Alinea la descripción a la izquierda */
-        max-width: 90%;
+        margin: 0;
+        max-width: 85%;
         font-size: 1.1rem;
     }
-    
+
     .ubicacion {
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
-    /* 2. LAS DEMÁS SECCIONES: Más anchas para que respiren */
-    .contenedor-seccion {
-        max-width: 1000px; /* Ensanchamos el cuerpo de la página */
+    /* SECCIÓN 2: ARQUITECTURA (Maquetación Editorial Dividida) */
+    .arquitectura {
+        padding: 100px 0;
     }
     
-    .texto-filosofia {
-        font-size: 1.15rem;
+    /* El contenedor ahora aloja Filosofía a la izquierda y Habilidades a la derecha */
+    .arquitectura .contenedor-seccion {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 60px;
     }
 
-    /* 3. PROYECTOS: En cuadrícula de 2 columnas */
+    .arquitectura .cabecera-seccion {
+        flex: 1;
+        max-width: 55%; /* Prioridad a tu discurso profesional */
+    }
+
+    .titulo-seccion {
+        font-size: 2.4rem;
+    }
+
+    .texto-filosofia {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 0; /* Limpieza de márgenes heredados */
+    }
+
+    .contenedor-habilidades {
+        flex: 1;
+        max-width: 38%;
+        background: rgba(184, 151, 94, 0.03); /* Sutil recuadro de acento */
+        padding: 30px;
+        border-left: 2px solid var(--acento-bronce);
+    }
+
+    /* SECCIÓN 3: PROYECTOS (Cuadrícula Avanzada de Doble Columna) */
+    .seccion-proyectos {
+        padding: 100px 0;
+    }
+
     .galeria-minimalista {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Divide los proyectos en dos mitades */
-        gap: 50px;
+        grid-template-columns: repeat(2, 1fr); /* 2 Proyectos por fila */
+        gap: 60px 40px; /* Espaciado elegante entre bloques */
+        margin-top: 50px;
     }
-    
+
     .proyecto-item {
+        margin-bottom: 0;
+        padding-bottom: 0;
         border-bottom: none;
-        border-top: 1px solid rgba(184, 151, 94, 0.2); /* Línea arriba en lugar de abajo */
-        padding-top: 30px;
+        border-top: 1px solid rgba(184, 151, 94, 0.2); /* Líneas estructurales superiores */
+        padding-top: 25px;
+    }
+
+    .proyecto-titulo {
+        font-size: 1.7rem;
+    }
+
+    .proyecto-descripcion {
+        font-size: 0.95rem;
+        min-height: 80px; /* Mantiene la simetría visual si un texto es más corto */
+    }
+
+    /* SECCIÓN 4: CONTACTO (Espaciado Ejecutivo) */
+    .seccion-contacto {
+        padding: 100px 0 40px 0;
+    }
+
+    .titulo-contacto {
+        font-size: 2.6rem;
+    }
+
+    .texto-contacto {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 50px auto;
+    }
+
+    .enlaces-contacto {
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+
+    .enlace-footer {
+        font-size: 0.9rem;
     }
 }
