@@ -9,14 +9,29 @@
 </head>
 <body>
 
-    <header class="hero">
+        <header class="hero">
         <div class="hero-contenido">
-            <p class="saludo">Bienvenida, soy</p>
-            <h1 class="nombre">Tu Nombre Aquí</h1>
-            <h2 class="profesion">Desarrolladora Backend & Web</h2>
-            <p class="descripcion-corta">Creando arquitectura digital con elegancia, lógica y precisión.</p>
+            
+            <div class="hero-imagen-wrapper">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Marikarla Gondres" class="hero-foto" id="fotoPerfil" onclick="abrirLightbox()">
+            </div>
+
+            <div class="hero-texto">
+                <p class="saludo">Bienvenida, soy</p>
+                <h1 class="nombre">Marikarla Gondres</h1>
+                <h2 class="profesion">Desarrolladora Backend & Web</h2>
+                <p class="descripcion-corta">Creando arquitectura digital con elegancia, lógica y precisión.</p>
+                <p class="ubicacion">São José dos Pinhais, Brasil</p>
+            </div>
+
         </div>
     </header>
+
+    <div id="lightbox" class="lightbox" onclick="cerrarLightbox(event)">
+        <span class="cerrar-lightbox" onclick="cerrarLightbox(event)">&times;</span>
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" class="lightbox-contenido">
+    </div>
+
 
     <!-- SECCIÓN 2: FILOSOFÍA Y HABILIDADES -->
     <section class="arquitectura" id="filosofia">
@@ -102,6 +117,19 @@
             
         </div>
     </footer>
+
+        <script>
+        function abrirLightbox() {
+            document.getElementById('lightbox').style.display = 'block';
+        }
+
+        function cerrarLightbox(event) {
+            // Se cierra solo si tocas la 'X' o el fondo negro
+            if (event.target.id === 'lightbox' || event.target.className === 'cerrar-lightbox') {
+                document.getElementById('lightbox').style.display = 'none';
+            }
+        }
+    </script>
 
     
     </body>
