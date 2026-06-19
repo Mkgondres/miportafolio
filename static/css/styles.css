@@ -354,3 +354,72 @@ body {
     color: #777777; /* Gris oscuro para que la firma sea muy sutil */
     letter-spacing: 1px;
 }
+/* =========================================
+   DISEÑO ADAPTATIVO PARA PANTALLAS GRANDES (COMPUTADORAS)
+   ========================================= */
+@media (min-width: 992px) {
+    
+    /* 1. EL INICIO: Lado a Lado */
+    .hero {
+        text-align: left; /* Quitamos el texto centrado */
+    }
+    
+    .hero-contenido {
+        flex-direction: row; /* Coloca la foto y el texto uno al lado del otro */
+        max-width: 1100px; /* Hacemos el contenedor el doble de ancho */
+        gap: 80px; /* Espacio elegante entre la foto y tu nombre */
+        justify-content: space-between;
+    }
+    
+    .hero-imagen-wrapper {
+        flex-shrink: 0; /* Evita que la foto se aplaste */
+    }
+    
+    /* Hacemos la foto más grande e imponente en PC */
+    .hero-foto {
+        width: 380px;
+        height: 520px;
+        border-radius: 190px 190px 0 0; /* Ajustamos el arco al nuevo tamaño */
+    }
+    
+    /* Letras gigantes estilo editorial para escritorio */
+    .nombre {
+        font-size: 5rem; 
+    }
+    
+    .profesion {
+        font-size: 1.4rem;
+    }
+    
+    .descripcion-corta {
+        margin: 0; /* Alinea la descripción a la izquierda */
+        max-width: 90%;
+        font-size: 1.1rem;
+    }
+    
+    .ubicacion {
+        margin-top: 40px;
+    }
+
+    /* 2. LAS DEMÁS SECCIONES: Más anchas para que respiren */
+    .contenedor-seccion {
+        max-width: 1000px; /* Ensanchamos el cuerpo de la página */
+    }
+    
+    .texto-filosofia {
+        font-size: 1.15rem;
+    }
+
+    /* 3. PROYECTOS: En cuadrícula de 2 columnas */
+    .galeria-minimalista {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide los proyectos en dos mitades */
+        gap: 50px;
+    }
+    
+    .proyecto-item {
+        border-bottom: none;
+        border-top: 1px solid rgba(184, 151, 94, 0.2); /* Línea arriba en lugar de abajo */
+        padding-top: 30px;
+    }
+}
