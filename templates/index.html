@@ -13,7 +13,7 @@
         <div class="hero-contenido">
             
             <div class="hero-imagen-wrapper">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Marikarla Gondres" class="hero-foto" id="fotoPerfil" onclick="abrirLightbox()">
+                <img src="{{ url_for('static', filename='marikarla.png') }}" alt="Marikarla Gondres" class="hero-foto" id="fotoPerfil" onclick="abrirLightbox()">
             </div>
 
             <div class="hero-texto">
@@ -29,7 +29,7 @@
 
     <div id="lightbox" class="lightbox" onclick="cerrarLightbox(event)">
         <span class="cerrar-lightbox" onclick="cerrarLightbox(event)">&times;</span>
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" class="lightbox-contenido">
+        <img src="{{ url_for('static', filename='marikarla.png') }}" class="lightbox-contenido">
     </div>
 
 
