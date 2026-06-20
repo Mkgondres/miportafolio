@@ -463,46 +463,53 @@ body {
         position: relative; 
     }
 
-     /* FIRMA MARCA DE AGUA: POSICIÓN INFERIOR IZQUIERDA */
+         /* CONTENEDOR MAESTRO DE LA FIRMA (Ocupa el 100% de la sección) */
     .firma-agua {
-        display: flex; 
+        display: block; /* Cambiamos a block para controlar cada elemento por separado */
         position: absolute; 
-        bottom: -40px; 
-        left: -10px; 
-        align-items: baseline; 
-        /* Opacidad general eliminada para que el oro pueda brillar */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         pointer-events: none; 
         user-select: none;
         z-index: 0; 
     }
 
     .letra-g {
-        font-family: var(--fuente-firma); 
+        font-family: var(--fuente-firma); /* Italianno */
         font-size: 38rem; 
-        line-height: 0.5; 
-        
-        /* 1. EL CUERPO ORIGINAL (Gris oscuro transparente para recuperar contraste) */
-        color: rgba(26, 26, 26, 0.04); 
+        color: rgba(26, 26, 26, 0.04); /* Tu color gris sutil original */
         font-weight: normal; 
+        position: absolute;
+        bottom: -20px; /* Se queda estática en el vacío izquierdo */
+        left: 60px; /* Alineada limpiamente con el inicio del título */
+        line-height: 1;
         
-        /* 2. EL BORDE ORO DIFUMINADO */
-        text-shadow: 0 0 15px rgba(184, 151, 94, 0.4); 
+        /* BORDE ORO AFILADO: Eliminamos el lodo visual reduciendo el difuminado a un hilo fino */
+        text-shadow: 
+            0 0 2px rgba(184, 151, 94, 0.7), 
+            0 0 6px rgba(184, 151, 94, 0.2); 
     }
 
     .letras-mk {
-        font-family: var(--fuente-firma); 
+        font-family: var(--fuente-firma); /* Italianno */
         font-size: 14rem; 
-        margin-left: 5px; 
-        
-        /* 1. EL CUERPO ORIGINAL */
-        color: rgba(26, 26, 26, 0.04); 
+        color: rgba(26, 26, 26, 0.04); /* Tu color gris sutil original */
         font-weight: normal; 
-        position: relative;
-        top: 100px; 
+        line-height: 1;
         
-        /* 2. EL BORDE ORO DIFUMINADO */
-        text-shadow: 0 0 12px rgba(184, 151, 94, 0.4); 
+        /* COORDENADAS PARA CLAVARLO AL PIE DE SECCIÓN */
+        position: absolute;
+        bottom: 5px; /* 👈 Al ras del piso de la sección, en el espacio blanco final */
+        left: 34%;   /* 👈 Centrado matemático justo debajo del bloque de texto central */
+        
+        /* BORDE ORO AFILADO */
+        text-shadow: 
+            0 0 2px rgba(184, 151, 94, 0.7), 
+            0 0 5px rgba(184, 151, 94, 0.2); 
     }
+
 
 
 
