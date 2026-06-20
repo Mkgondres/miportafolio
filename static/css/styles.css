@@ -464,34 +464,41 @@ body {
         width: auto;
     }
 
-    /* FIRMA DE AUTOR G .MK: POSICIONAMIENTO MILIMÉTRICO */
+        /* ASEGÚRATE DE QUE EL CONTENEDOR TENGA ESTO PARA ATRAPAR LA FIRMA */
+    .arquitectura .contenedor-seccion {
+        position: relative; 
+        /* (Deja intacto el display: flex o grid que ya tengas aquí) */
+    }
+
+    /* FIRMA MARCA DE AGUA: POSICIÓN INFERIOR IZQUIERDA */
     .firma-agua {
         display: flex; 
         position: absolute; 
-        top: 240px; /* Deslizada al gran espacio vacío izquierdo */
-        left: 20px; /* Alineada bajo el título */
-        align-items: center; 
-        color: var(--texto-negro);
-        opacity: 0.04; /* Transparencia de marca de agua */
+        bottom: -40px; /* La ancla al ras del piso de la sección */
+        left: 20px; /* La pega a la izquierda, justo debajo del título */
+        align-items: baseline; /* Ancla la base de la G con el .mks */
+        opacity: 0.05; /* Transparencia de marca de agua */
         pointer-events: none; 
         user-select: none;
-        z-index: 0; /* Mandada estrictamente al fondo */
+        z-index: 0; /* Al fondo, detrás de todo */
     }
 
     .letra-g {
-        font-family: var(--fuente-firma); /* FUENTE DE CARTA ANTIGUA ORNAMENTADA */
-        font-size: 32rem; /* Tamaño monumental llenando el hueco */
-        line-height: 0.5; 
+        font-family: 'Italianno', cursive; /* La fuente caligráfica que elegiste */
+        font-size: 32rem; /* Tamaño gigante para llenar todo el bloque izquierdo */
+        line-height: 0.5; /* Evita que la caja invisible empuje otros elementos */
+        color: var(--texto-negro);
         font-weight: normal; 
     }
 
-    .letras-mk {
+    .letras-mks {
         font-family: var(--fuente-titulos);
-        font-size: 6rem; 
-        margin-left: 110px; /* Empujada a la derecha, debajo de la columna del texto central */
-        margin-top: 50px; /* Ajuste visual con la G monumental */
+        font-size: 5rem; 
+        margin-left: 15px; /* Separa el .mks dejándolo posicionado bajo el texto central */
+        color: var(--texto-negro);
         letter-spacing: -2px;
     }
+
 
     /* PROYECTOS */
     .seccion-proyectos {
