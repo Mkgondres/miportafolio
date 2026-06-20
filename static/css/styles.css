@@ -69,10 +69,11 @@ body {
     height: 270px;
     object-fit: cover;
     border-radius: 100px 100px 0 0;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    box-shadow: -15px 25px 45px rgba(0, 0, 0, 0.35); /* 👈 SOMBRA 3D PARA MÓVIL */
     border-bottom: 4px solid var(--acento-bronce);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 
 .hero-foto:hover {
     transform: scale(1.03);
