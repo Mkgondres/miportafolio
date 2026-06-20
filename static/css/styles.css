@@ -360,7 +360,7 @@ body {
 /* ==========================================================================
    INTERRUPTOR RESPONSIVO: OPTIMIZACIÓN COMPLETA PARA COMPUTADORAS (ESCRITORIO)
    ========================================================================== */
-@media (min-width: 992px) {
+@media (min-width: 900px) {
     
     /* REGLA MAESTRA DE ANCHO PARA ESCRITORIO */
     .contenedor-seccion {
