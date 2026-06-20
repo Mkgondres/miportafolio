@@ -41,5 +41,13 @@ LISTA_PROYECTOS = [
         "enlace": "https://mkgondres.github.io/Condominio/"
     }
 
+    {
+          "id": 6,
+        "titulo": "Plataforma Médica de Lujo (Pediatría Premium)",
+        "descripcion": "Desarrollo integral de presencia digital médica enfocado en el posicionamiento de marca de alto perfil. El sitio implementa animaciones cinemáticas mediante Intersection Observer para una experiencia de usuario inmersiva, un sistema de gestión de citas con integración de canal de comunicación directa (WhatsApp API) para reducción de fricción en la captación de pacientes, y una arquitectura optimizada para SEO local técnico. Diseño bajo principios de 'Medical Luxury' con una jerarquía visual que comunica autoridad y confianza.",
+        "tecnologias": ["HTML5 Semántico", "CSS3 (Animations & Grid)", "Vanilla JavaScript (Intersection Observer & Form API)", "SEO Técnico"],
+        "enlace": "https://mkgondres.github.io/Dr.Gondres/"
+    }
+
 ]
 
