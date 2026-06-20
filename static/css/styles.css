@@ -484,13 +484,18 @@ body {
         font-weight: normal; 
     }
 
-    .letras-mk {
-        font-family: var(--fuente-firma); /* Italianno también aquí */
-        font-size: 14rem; /* Menor que la G, anclada en el texto central */
-        margin-left: 5px; /* Separación sutil */
+        .letras-mk {
+        font-family: var(--fuente-firma); 
+        font-size: 14rem; 
+        margin-left: 5px; 
         color: var(--texto-negro);
         font-weight: normal; 
+        
+        /* LA MAGIA PARA BAJARLO AL PISO */
+        position: relative;
+        top: 100px; /* 👈 Este valor empuja el .Mk hacia abajo, sacándolo del texto */
     }
+
 
     /* PROYECTOS */
     .seccion-proyectos {
