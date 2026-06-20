@@ -607,3 +607,25 @@ body {
     border: 2px solid var(--acento-bronce) !important; /* Más grosor para que llame la atención */
     font-weight: bold !important;
 }
+
+/* Tarjetas de Proyecto con Glassmorphism */
+.proyecto-item {
+    background: rgba(255, 255, 255, 0.6); /* Transparencia blanca sutil */
+    backdrop-filter: blur(15px);            /* El efecto de vidrio esmerilado */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    
+    /* Estado inicial para la animación */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Clase que JS activará cuando el usuario haga scroll */
+.proyecto-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
