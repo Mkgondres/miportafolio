@@ -2,6 +2,9 @@
    PORTAFOLIO EDITORIAL PREMIUM - HOJA DE ESTILOS MAESTRA RECONSTRUIDA
    ========================================================================== */
 
+/* IMPORTACIÓN DE FUENTE CALIGRÁFICA ANTIGUA PARA LA "G" */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 /* 1. VARIABLES Y CONFIGURACIÓN CROMÁTICA */
 :root {
     --fondo-crema: #F9F9F6; 
@@ -11,6 +14,7 @@
     
     --fuente-titulos: 'Playfair Display', serif; 
     --fuente-textos: 'Montserrat', sans-serif; 
+    --fuente-firma: 'Great Vibes', cursive; /* La nueva fuente antigua */
 }
 
 /* 2. RESETEO E INTERFAZ BASE (Móvil Primero) */
@@ -31,7 +35,7 @@ body {
 /* Contenedor global responsivo para el cuerpo de la página */
 .contenedor-seccion {
     width: 100%;
-    max-width: 650px; /* Ancho ideal para lectura en móviles */
+    max-width: 650px; 
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -40,7 +44,6 @@ body {
    DISEÑO BASE: OPTIMIZADO PARA MÓVILES (PANTALLAS CHICAS)
    ========================================================================== */
 
-/* SECCIÓN 1: INICIO (HERO) */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -69,7 +72,7 @@ body {
     height: 270px;
     object-fit: cover;
     border-radius: 100px 100px 0 0;
-    box-shadow: -15px 25px 45px rgba(0, 0, 0, 0.35); /* SOMBRA 3D PARA MÓVIL */
+    box-shadow: -15px 25px 45px rgba(0, 0, 0, 0.35); 
     border-bottom: 4px solid var(--acento-bronce);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -150,6 +153,11 @@ body {
     background-color: var(--acento-bronce);
 }
 
+/* Ocultar firma en móvil por espacio */
+.firma-agua {
+    display: none; 
+}
+
 .texto-filosofia {
     font-size: 0.95rem;
     color: #333333;
@@ -179,7 +187,7 @@ body {
     margin: 0 6px;
 }
 
-/* SECCIÓN 3: ARQUITECTURA DE PRUEBA (PROYECTOS) */
+/* SECCIÓN 3: PROYECTOS */
 .seccion-proyectos {
     background-color: var(--fondo-blanco);
     padding: 70px 20px;
@@ -311,7 +319,8 @@ body {
     letter-spacing: 1px;
 }
 
-/* SISTEMA LIGHTBOX */
+
+/* LIGHTBOX */
 .lightbox {
     display: none;
     position: fixed;
@@ -356,19 +365,17 @@ body {
     color: var(--acento-bronce);
 }
 
-
 /* ==========================================================================
    INTERRUPTOR RESPONSIVO: OPTIMIZACIÓN COMPLETA PARA COMPUTADORAS (ESCRITORIO)
    ========================================================================== */
 @media (min-width: 900px) {
     
-    /* REGLA MAESTRA DE ANCHO Y MÁRGENES PARA ESCRITORIO */
     .contenedor-seccion {
         max-width: 1140px; 
-        padding: 0 60px; /* Margen lateral elegante para que nada toque el borde */
+        padding: 0 60px; 
     }
 
-    /* SECCIÓN 1: INICIO (Paralelo: Foto Izquierda, Texto Derecha) */
+    /* INICIO */
     .hero {
         text-align: left;
         padding: 150px 60px; 
@@ -393,12 +400,11 @@ body {
         order: 1; 
     }
 
-    /* LA FOTO CON EFECTO DE SOMBRA 3D EN ESCRITORIO */
     .hero-foto {
         width: 360px; 
         height: 480px;
         border-radius: 180px 180px 0 0; 
-        box-shadow: -25px 35px 65px rgba(0, 0, 0, 0.35); /* Sombra dramática y profunda */
+        box-shadow: -25px 35px 65px rgba(0, 0, 0, 0.35); 
     }
 
     .nombre {
@@ -420,7 +426,7 @@ body {
         margin-top: 35px;
     }
 
-    /* SECCIÓN 2: ARQUITECTURA (Maquetación Editorial Dividida) */
+    /* SECCIÓN ARQUITECTURA */
     .arquitectura {
         padding: 150px 60px; 
     }
@@ -429,13 +435,13 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        gap: 60px;
+        gap: 80px; /* Separación garantizada entre texto y cuadro */
     }
 
     .arquitectura .cabecera-seccion {
-        flex: 1;
-        max-width: 55%; 
-        position: relative; /* CRUCIAL PARA SOSTENER LA FIRMA G.MK */
+        width: 55%; /* Fuerza al texto a mantenerse ancho */
+        position: relative; 
+        z-index: 1; /* Protege el texto de la firma */
     }
 
     .titulo-seccion {
@@ -448,41 +454,45 @@ body {
         margin-bottom: 0; 
     }
 
-    .contenedor-habilidades {
-        flex: 1;
-        max-width: 38%;
-        background: rgba(184, 151, 94, 0.03); 
-        padding: 30px;
-        border-left: 2px solid var(--acento-bronce);
-    }
-
-    /* ADORNO FIRMA DE AUTOR (G .MK) */
+    /* FIRMA DE AGUA CON NUEVA FUENTE ANTIGUA */
     .firma-agua {
+        display: flex; /* La activamos en PC */
         position: absolute; 
-        left: 0;
-        margin-top: 60px; 
-        display: flex;
+        left: 5%; /* La mueve un poco a la derecha */
+        top: 60%; /* La desliza hacia abajo */
+        transform: translateY(-50%); /* Centrado exacto */
         align-items: baseline; 
-        font-family: var(--fuente-titulos);
         color: var(--texto-negro);
-        opacity: 0.05; 
+        opacity: 0.05; /* Transparencia de marca de agua */
         pointer-events: none; 
         user-select: none;
+        z-index: -1; /* La manda estrictamente al fondo */
     }
 
     .letra-g {
-        font-size: 18rem; 
-        line-height: 0.7; 
-        font-style: italic; 
+        font-family: var(--fuente-firma); /* FUENTE DE CARTA ANTIGUA */
+        font-size: 24rem; /* Tamaño gigante */
+        line-height: 0.5; /* Evita que rompa el contenedor */
+        font-weight: normal; 
     }
 
     .letras-mk {
-        font-size: 6rem; 
-        margin-left: 5px; 
+        font-family: var(--fuente-titulos);
+        font-size: 5rem; /* Tamaño sutil para contraste */
+        margin-left: 15px; 
         letter-spacing: -2px;
     }
 
-    /* SECCIÓN 3: PROYECTOS (Cuadrícula Avanzada de Doble Columna) */
+    /* CONTENEDOR HABILIDADES */
+    .contenedor-habilidades {
+        width: 38%; /* Fuerza a las habilidades a no invadir */
+        background: rgba(184, 151, 94, 0.03); 
+        padding: 40px;
+        border-left: 2px solid var(--acento-bronce);
+        z-index: 1;
+    }
+
+    /* SECCIÓN PROYECTOS */
     .seccion-proyectos {
         padding: 150px 60px; 
     }
@@ -511,7 +521,7 @@ body {
         min-height: 80px; 
     }
 
-    /* SECCIÓN 4: CONTACTO (Espaciado Ejecutivo) */
+    /* CONTACTO */
     .seccion-contacto {
         padding: 150px 60px 80px 60px; 
     }
