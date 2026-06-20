@@ -476,18 +476,16 @@ body {
         z-index: 0; 
     }
 
-    .letra-g {
+        .letra-g {
         font-family: var(--fuente-firma); 
         font-size: 38rem; 
         font-weight: normal; 
         line-height: 0.6; 
         
-        /* POSICIÓN ABSOLUTA DE LA G */
         position: absolute;
-        bottom: -50px; /* Clavada en el piso izquierdo */
+        bottom: 10px; /* 👈 Subimos la G unos 60 pixeles para que su cola no toque la sección blanca */
         left: -10px; 
         
-        /* EL BORDE ORO PREMIUM */
         color: rgba(184, 151, 94, 0.02); 
         -webkit-text-stroke: 1px rgba(184, 151, 94, 0.4); 
         text-shadow: none; 
@@ -497,18 +495,17 @@ body {
         font-family: var(--fuente-firma); 
         font-size: 14rem; 
         font-weight: normal; 
-        line-height: 0.6; /* Le quitamos la caja invisible extra */
+        line-height: 0.6; 
         
-        /* LA MAGIA: COORDENADA INDEPENDIENTE PARA CLAVARLO AL PISO */
         position: absolute;
-        bottom: 10px; /* 👈 Se va hasta el fondo absoluto de la sección */
-        left: 33%; /* 👈 Centrado debajo de tu texto */
+        bottom: -90px; /* 👈 VALOR NEGATIVO: Lo obligamos a bajar más allá del texto, directo al vacío crema */
+        left: 36%; 
         
-        /* EL MISMO BORDE ORO PREMIUM */
         color: rgba(184, 151, 94, 0.02); 
         -webkit-text-stroke: 1px rgba(184, 151, 94, 0.4);
         text-shadow: none; 
     }
+
 
 
 
