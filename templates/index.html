@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Profesional</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}?v=13">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}?v=18">
 
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Fuentes: Playfair Display, Montserrat e Italianno agregada -->
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-        <header class="hero">
+    <header class="hero">
         <div class="hero-contenido">
             
             <div class="hero-imagen-wrapper">
@@ -19,7 +19,7 @@
             </div>
 
             <div class="hero-texto">
-                <p class="saludo">Bienvenida, soy</p>
+                <p class="saludo">Bienvenido/a, soy</p>
                 <h1 class="nombre">Marikarla Gondres</h1>
                 <h2 class="profesion">Desarrolladora Backend & Web</h2>
                 <p class="descripcion-corta">Creando arquitectura digital con elegancia, lógica y precisión.</p>
@@ -34,13 +34,13 @@
         <img src="{{ url_for('static', filename='marikarla.png') }}" class="lightbox-contenido">
     </div>
 
-
-        <!-- SECCIÓN 2: FILOSOFÍA Y HABILIDADES -->
+    <!-- SECCIÓN 2: FILOSOFÍA Y HABILIDADES -->
     <section class="arquitectura" id="filosofia">
         <div class="contenedor-seccion" style="position: relative;">
             
+            <!-- FIRMA CON .Mk CORREGIDO -->
             <div class="firma-agua">
-                <span class="letra-g">G</span><span class="letras-mk">.MK</span>
+                <span class="letra-g">G</span><span class="letras-mk">.Mk</span>
             </div>
 
             <div class="grid-arquitectura">
@@ -72,9 +72,7 @@
         </div>
     </section>
 
-
-
-        <!-- SECCIÓN 3: ARQUITECTURA DE PRUEBA (PROYECTOS) -->
+    <!-- SECCIÓN 3: ARQUITECTURA DE PRUEBA (PROYECTOS) -->
     <section class="seccion-proyectos" id="proyectos">
         <div class="contenedor-seccion">
             
@@ -105,7 +103,7 @@
         </div>
     </section>
 
-        <footer class="seccion-contacto" id="contacto">
+    <footer class="seccion-contacto" id="contacto">
         <div class="contenedor-seccion text-center">
             
             <h2 class="titulo-contacto">Iniciemos una Conversación</h2>
@@ -132,7 +130,7 @@
         </div>
     </footer>
 
-        <script>
+    <script>
         function abrirLightbox() {
             document.getElementById('lightbox').style.display = 'block';
         }
@@ -145,7 +143,5 @@
         }
     </script>
 
-    
-    </body>
+</body>
 </html>
-
