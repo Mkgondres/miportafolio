@@ -463,51 +463,43 @@ body {
         position: relative; 
     }
 
-         /* CONTENEDOR MAESTRO DE LA FIRMA (Ocupa el 100% de la sección) */
+             /* CONTENEDOR FIRMA: ANCLADO AL FONDO IZQUIERDO */
     .firma-agua {
-        display: block; /* Cambiamos a block para controlar cada elemento por separado */
+        display: flex; 
         position: absolute; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        bottom: -50px; /* Clavado en el piso de la sección */
+        left: 0px; /* Pegado al margen izquierdo (tu círculo rojo) */
+        align-items: baseline; /* Alineación natural */
         pointer-events: none; 
         user-select: none;
         z-index: 0; 
     }
 
     .letra-g {
-        font-family: var(--fuente-firma); /* Italianno */
-        font-size: 38rem; 
-        color: rgba(26, 26, 26, 0.04); /* Tu color gris sutil original */
+        font-family: var(--fuente-firma); 
+        font-size: 36rem; /* Tamaño colosal para llenar el vacío */
+        line-height: 0.6; /* Evita que la letra se dispare hacia arriba */
         font-weight: normal; 
-        position: absolute;
-        bottom: -20px; /* Se queda estática en el vacío izquierdo */
-        left: 60px; /* Alineada limpiamente con el inicio del título */
-        line-height: 1;
         
-        /* BORDE ORO AFILADO: Eliminamos el lodo visual reduciendo el difuminado a un hilo fino */
-        text-shadow: 
-            0 0 2px rgba(184, 151, 94, 0.7), 
-            0 0 6px rgba(184, 151, 94, 0.2); 
+        /* BORDE ORO PURO: Relleno transparente y un contorno nítido oro */
+        color: rgba(184, 151, 94, 0.02); /* Relleno casi invisible */
+        -webkit-text-stroke: 1px rgba(184, 151, 94, 0.4); /* Línea dorada afilada */
+        text-shadow: none; /* Aniquilamos la sombra sucia */
     }
 
     .letras-mk {
-        font-family: var(--fuente-firma); /* Italianno */
-        font-size: 14rem; 
-        color: rgba(26, 26, 26, 0.04); /* Tu color gris sutil original */
+        font-family: var(--fuente-firma); 
+        font-size: 13rem; /* Tamaño proporcional */
         font-weight: normal; 
-        line-height: 1;
+        margin-left: 5px; 
         
-        /* COORDENADAS PARA CLAVARLO AL PIE DE SECCIÓN */
-        position: absolute;
-        bottom: 5px; /* 👈 Al ras del piso de la sección, en el espacio blanco final */
-        left: 34%;   /* 👈 Centrado matemático justo debajo del bloque de texto central */
+        position: relative;
+        top: 60px; /* Empuja el .Mk hacia abajo, para que descanse bajo el texto */
         
-        /* BORDE ORO AFILADO */
-        text-shadow: 
-            0 0 2px rgba(184, 151, 94, 0.7), 
-            0 0 5px rgba(184, 151, 94, 0.2); 
+        /* MISMO BORDE ORO PURO */
+        color: rgba(184, 151, 94, 0.02); 
+        -webkit-text-stroke: 1px rgba(184, 151, 94, 0.4);
+        text-shadow: none; 
     }
 
 
