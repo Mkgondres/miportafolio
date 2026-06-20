@@ -11,10 +11,11 @@ LISTA_PROYECTOS = [
 
     {
         "id": 2,
-        "titulo": "Dashboard Financiero (Backend)",
-        "descripcion": "Desarrollo de un panel de control conceptual para gestión de datos privados. Implementación de una estructura robusta preparada para consumir APIs externas y procesar estadísticas en tiempo real.",
-        "tecnologias": ["Python", "Flask", "Integración de Datos"],
-        "enlace": "#"
+        "titulo": "Portafolio Interactivo POO con Integración BaaS (Firebase)",
+        "descripcion": "Desarrollo de un ecosistema web dinámico estructurado 100% bajo los principios SOLID utilizando Programación Orientada a Objetos en JavaScript. El sistema cuenta con clases independientes para la manipulación avanzada del DOM, observers de intersección, matemáticas de parallax y soporte de gestos táctiles. Integrado de forma asíncrona con una base de datos NoSQL (Firebase Firestore) para el renderizado en tiempo real de contenido dinámico.",
+        "tecnologias": ["JavaScript POO (ES6+)", "Firebase Firestore", "Intersection Observer API", "CSS Grid & Flexbox"],
+        "enlace": "https://mkgondres.github.io/Portafolio/"
     }
+
 ]
 
