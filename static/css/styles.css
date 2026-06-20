@@ -2,8 +2,8 @@
    PORTAFOLIO EDITORIAL PREMIUM - HOJA DE ESTILOS MAESTRA UNIFICADA
    ========================================================================= */
 
-/* IMPORTACIÓN DE FUENTE DE CARTA ANTIGUA ORNAMENTADA (MONSIEUR LA DOULAISE) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Monsieur+La+Doulaise&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+/* IMPORTACIÓN DE FUENTES (Incluye Italianno) */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* 1. VARIABLES Y CONFIGURACIÓN CROMÁTICA */
 :root {
@@ -14,9 +14,7 @@
     
     --fuente-titulos: 'Playfair Display', serif; 
     --fuente-textos: 'Montserrat', sans-serif; 
-    
-    /* CAMBIO DE FUENTE: DE GREAT VIBES A MONSIEUR LA DOULAISE PARA MÁS ANTIGÜEDAD */
-    --fuente-firma: 'Monsieur La Doulaise', cursive; 
+    --fuente-firma: 'Italianno', cursive; 
 }
 
 /* 2. RESETEO E INTERFAZ BASE (Móvil Primero) */
@@ -440,10 +438,6 @@ body {
         z-index: 1; /* Protege el texto de lectura sobre la firma */
     }
 
-    .cabecera-seccion {
-        position: relative; /* Clave para el anclaje de la G */
-    }
-
     .titulo-seccion {
         font-size: 2.4rem;
         margin-bottom: 10px;
@@ -464,41 +458,39 @@ body {
         width: auto;
     }
 
-        /* ASEGÚRATE DE QUE EL CONTENEDOR TENGA ESTO PARA ATRAPAR LA FIRMA */
+    /* ASEGÚRATE DE QUE EL CONTENEDOR TENGA ESTO PARA ATRAPAR LA FIRMA */
     .arquitectura .contenedor-seccion {
         position: relative; 
-        /* (Deja intacto el display: flex o grid que ya tengas aquí) */
     }
 
     /* FIRMA MARCA DE AGUA: POSICIÓN INFERIOR IZQUIERDA */
     .firma-agua {
         display: flex; 
         position: absolute; 
-        bottom: -40px; /* La ancla al ras del piso de la sección */
-        left: 20px; /* La pega a la izquierda, justo debajo del título */
-        align-items: baseline; /* Ancla la base de la G con el .mks */
+        bottom: -50px; /* La ancla profundamente al piso de la sección */
+        left: -10px; /* Pegada a la izquierda para ocupar todo el vacío */
+        align-items: baseline; /* Alinea la G y el .Mk en el mismo renglón invisible */
         opacity: 0.05; /* Transparencia de marca de agua */
         pointer-events: none; 
         user-select: none;
-        z-index: 0; /* Al fondo, detrás de todo */
+        z-index: 0; /* Al fondo, detrás de todo el texto */
     }
 
     .letra-g {
-        font-family: 'Italianno', cursive; /* La fuente caligráfica que elegiste */
-        font-size: 32rem; /* Tamaño gigante para llenar todo el bloque izquierdo */
-        line-height: 0.5; /* Evita que la caja invisible empuje otros elementos */
+        font-family: var(--fuente-firma); /* Italianno */
+        font-size: 38rem; /* TAMAÑO COLOSAL para devorar el espacio izquierdo */
+        line-height: 0.5; /* Evita que la caja desborde hacia abajo */
         color: var(--texto-negro);
         font-weight: normal; 
     }
 
-    .letras-mks {
-        font-family: var(--fuente-titulos);
-        font-size: 5rem; 
-        margin-left: 15px; /* Separa el .mks dejándolo posicionado bajo el texto central */
+    .letras-mk {
+        font-family: var(--fuente-firma); /* Italianno también aquí */
+        font-size: 14rem; /* Menor que la G, anclada en el texto central */
+        margin-left: 5px; /* Separación sutil */
         color: var(--texto-negro);
-        letter-spacing: -2px;
+        font-weight: normal; 
     }
-
 
     /* PROYECTOS */
     .seccion-proyectos {
