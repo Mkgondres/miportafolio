@@ -6,7 +6,7 @@ LISTA_PROYECTOS = [
         "titulo": "Funnel de Conversión High-Ticket & Checkout Dinámico",
         "descripcion": "Desarrollo de una plataforma de ventas optimizada para velocidad extrema, sin depender de frameworks externos. Incluye un motor de urgencia persistente mediante Local Storage, una pasarela de pago interactiva multi-fase (con lógica para transacciones por tarjeta y códigos QR/PIX), validación de datos en tiempo real y una arquitectura visual moderna utilizando CSS Grid y animaciones asíncronas.",
         "tecnologias": ["Vanilla JavaScript", "Gestión de Estado Web", "CSS3 Avanzado", "HTML5 Semántico"],
-        "enlace": "https://github.com/Mkgondres/Landing-pages"
+        "enlace": "https://mkgondres.github.io/Landing-pages/"
     },
 
     {
