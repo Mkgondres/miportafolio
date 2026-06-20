@@ -476,24 +476,36 @@ body {
         z-index: 0; /* Al fondo, detrás de todo el texto */
     }
 
-    .letra-g {
+        .letra-g {
         font-family: var(--fuente-firma); /* Italianno */
-        font-size: 38rem; /* TAMAÑO COLOSAL para devorar el espacio izquierdo */
-        line-height: 0.5; /* Evita que la caja desborde hacia abajo */
-        color: var(--texto-negro);
-        font-weight: normal; 
-    }
-
-        .letras-mk {
-        font-family: var(--fuente-firma); 
-        font-size: 14rem; 
-        margin-left: 5px; 
-        color: var(--texto-negro);
+        font-size: 38rem; 
+        line-height: 0.5; 
+        color: rgba(26, 26, 26, 0.01); /* Volvemos el cuerpo de la letra casi transparente */
         font-weight: normal; 
         
-        /* LA MAGIA PARA BAJARLO AL PISO */
+        /* EFECTO MAESTRO DE RELIEVE ESCULPIDO CON BORDE ORO DIFUMINADO */
+        text-shadow: 
+            0 0 20px rgba(184, 151, 94, 0.25),   /* 1. El resplandor difuminado oro que pediste */
+            0 0 2px rgba(184, 151, 94, 0.35),   /* 2. Un borde oro un poco más definido para el trazo fino */
+            -1px -1px 1px rgba(255, 255, 255, 0.9), /* 3. Luz blanca arriba (crea el efecto relieve/esculpido) */
+            1px 1px 1px rgba(0, 0, 0, 0.04);     /* 4. Sombra sutil abajo para dar profundidad */
+    }
+
+    .letras-mk {
+        font-family: var(--fuente-firma); /* Italianno */
+        font-size: 14rem; 
+        margin-left: 5px; 
+        color: rgba(26, 26, 26, 0.01); /* Casi transparente */
+        font-weight: normal; 
         position: relative;
-        top: 100px; /* 👈 Este valor empuja el .Mk hacia abajo, sacándolo del texto */
+        top: 100px; 
+        
+        /* EL MISMO EFECTO DE RELIEVE EN ORO PARA EL .Mk */
+        text-shadow: 
+            0 0 15px rgba(184, 151, 94, 0.25),   /* Resplandor oro difuminado */
+            0 0 2px rgba(184, 151, 94, 0.35),    /* Borde oro fino */
+            -1px -1px 1px rgba(255, 255, 255, 0.9), /* Luz de relieve */
+            1px 1px 1px rgba(0, 0, 0, 0.04);     /* Sombra de relieve */
     }
 
 
