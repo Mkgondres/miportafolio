@@ -364,18 +364,19 @@ body {
     
     /* REGLA MAESTRA DE ANCHO PARA ESCRITORIO */
     .contenedor-seccion {
-        max-width: 1140px; /* Expansión total de la arquitectura del sitio */
+        max-width: 1140px; 
         padding: 0 20px;
     }
 
     /* SECCIÓN 1: INICIO (Paralelo: Foto Izquierda, Texto Derecha) */
     .hero {
         text-align: left;
-        padding: 120px 0;
+        padding: 150px 0; /* Más aire vertical */
+        min-height: auto; /* Eliminamos el estiramiento forzado */
     }
 
     .hero-contenido {
-        flex-direction: row; /* Coloca elementos de lado a lado */
+        flex-direction: row; 
         justify-content: space-between;
         align-items: center;
         gap: 80px;
@@ -387,17 +388,17 @@ body {
 
     .hero-imagen-wrapper {
         flex-shrink: 0;
-        order: 1; /* Mantiene la foto en un costado armónico */
+        order: 1; 
     }
 
     .hero-foto {
-        width: 360px; /* Dimensión majestuosa para monitores grandes */
+        width: 360px; 
         height: 480px;
-        border-radius: 180px 180px 0 0; /* Escalado perfecto del arco */
+        border-radius: 180px 180px 0 0; 
     }
 
     .nombre {
-        font-size: 4.8rem; /* Tipografía monumental tipo revista */
+        font-size: 4.8rem; 
     }
 
     .profesion {
@@ -417,10 +418,9 @@ body {
 
     /* SECCIÓN 2: ARQUITECTURA (Maquetación Editorial Dividida) */
     .arquitectura {
-        padding: 100px 0;
+        padding: 150px 0; /* Más aire vertical */
     }
     
-    /* El contenedor ahora aloja Filosofía a la izquierda y Habilidades a la derecha */
     .arquitectura .contenedor-seccion {
         display: flex;
         justify-content: space-between;
@@ -430,7 +430,7 @@ body {
 
     .arquitectura .cabecera-seccion {
         flex: 1;
-        max-width: 55%; /* Prioridad a tu discurso profesional */
+        max-width: 55%; 
     }
 
     .titulo-seccion {
@@ -440,26 +440,26 @@ body {
     .texto-filosofia {
         font-size: 1.1rem;
         line-height: 1.8;
-        margin-bottom: 0; /* Limpieza de márgenes heredados */
+        margin-bottom: 0; 
     }
 
     .contenedor-habilidades {
         flex: 1;
         max-width: 38%;
-        background: rgba(184, 151, 94, 0.03); /* Sutil recuadro de acento */
+        background: rgba(184, 151, 94, 0.03); 
         padding: 30px;
         border-left: 2px solid var(--acento-bronce);
     }
 
     /* SECCIÓN 3: PROYECTOS (Cuadrícula Avanzada de Doble Columna) */
     .seccion-proyectos {
-        padding: 100px 0;
+        padding: 150px 0; /* Más aire vertical */
     }
 
     .galeria-minimalista {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 Proyectos por fila */
-        gap: 60px 40px; /* Espaciado elegante entre bloques */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 60px 40px; 
         margin-top: 50px;
     }
 
@@ -467,7 +467,7 @@ body {
         margin-bottom: 0;
         padding-bottom: 0;
         border-bottom: none;
-        border-top: 1px solid rgba(184, 151, 94, 0.2); /* Líneas estructurales superiores */
+        border-top: 1px solid rgba(184, 151, 94, 0.2); 
         padding-top: 25px;
     }
 
@@ -477,12 +477,12 @@ body {
 
     .proyecto-descripcion {
         font-size: 0.95rem;
-        min-height: 80px; /* Mantiene la simetría visual si un texto es más corto */
+        min-height: 80px; 
     }
 
     /* SECCIÓN 4: CONTACTO (Espaciado Ejecutivo) */
     .seccion-contacto {
-        padding: 100px 0 40px 0;
+        padding: 150px 0 40px 0; /* Más aire vertical */
     }
 
     .titulo-contacto {
