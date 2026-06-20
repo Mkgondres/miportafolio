@@ -25,5 +25,13 @@ LISTA_PROYECTOS = [
         "enlace": "https://mkgondres.github.io/Tienda-online/"  
     }
 
+    {
+          "id": 4,
+        "titulo": "Landing Page Premium & Captación Asíncrona de Leads",
+        "descripcion": "Desarrollo de una interfaz web de lujo orientada a la conversión de servicios High-Ticket. Arquitectura construida con metodología BEM y un sistema de diseño basado en variables CSS. Destaca la implementación de un acordeón nativo HTML5 para optimización de rendimiento, integración de librerías mediante ES Modules (PhotoSwipe) y un sistema de gestión de formularios 'serverless' utilizando la API Fetch para el envío de datos asíncronos, complementado con modales de validación personalizados para una experiencia de usuario impecable.",
+        "tecnologias": ["JavaScript (ES Modules & Fetch API)", "Metodología BEM & CSS Variables", "Serverless Forms (FormSubmit)", "HTML5 Semántico Avanzado"],
+        "enlace": "https://mkgondres.github.io/Sonrisa-delujo/"
+    }
+
 ]
 
