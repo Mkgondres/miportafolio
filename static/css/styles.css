@@ -69,15 +69,14 @@ body {
     height: 270px;
     object-fit: cover;
     border-radius: 100px 100px 0 0;
-    box-shadow: -15px 25px 45px rgba(0, 0, 0, 0.35); /* 👈 SOMBRA 3D PARA MÓVIL */
+    box-shadow: -15px 25px 45px rgba(0, 0, 0, 0.35); /* SOMBRA 3D PARA MÓVIL */
     border-bottom: 4px solid var(--acento-bronce);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-
 .hero-foto:hover {
     transform: scale(1.03);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+    box-shadow: -18px 28px 50px rgba(0, 0, 0, 0.4);
 }
 
 @keyframes flotar {
@@ -358,7 +357,7 @@ body {
 }
 
 
-    /* ==========================================================================
+/* ==========================================================================
    INTERRUPTOR RESPONSIVO: OPTIMIZACIÓN COMPLETA PARA COMPUTADORAS (ESCRITORIO)
    ========================================================================== */
 @media (min-width: 900px) {
@@ -366,14 +365,14 @@ body {
     /* REGLA MAESTRA DE ANCHO Y MÁRGENES PARA ESCRITORIO */
     .contenedor-seccion {
         max-width: 1140px; 
-        padding: 0 60px; /* Los 60px de aire lateral para que la letra no toque el borde */
+        padding: 0 60px; /* Margen lateral elegante para que nada toque el borde */
     }
 
     /* SECCIÓN 1: INICIO (Paralelo: Foto Izquierda, Texto Derecha) */
     .hero {
         text-align: left;
-        padding: 150px 60px; /* Margen lateral en la portada y altura natural */
-        min-height: auto; /* Evita que el celular estire la página */
+        padding: 150px 60px; 
+        min-height: auto; 
     }
 
     .hero-contenido {
@@ -382,7 +381,7 @@ body {
         align-items: center;
         gap: 80px;
         max-width: 1140px; 
-        margin: 0 auto; /* Mantiene todo centrado en pantallas gigantes */
+        margin: 0 auto; 
     }
 
     .hero-texto {
@@ -394,7 +393,7 @@ body {
         order: 1; 
     }
 
-    /* LA FOTO CON EL NUEVO EFECTO DE SOMBRA 3D */
+    /* LA FOTO CON EFECTO DE SOMBRA 3D EN ESCRITORIO */
     .hero-foto {
         width: 360px; 
         height: 480px;
@@ -423,7 +422,7 @@ body {
 
     /* SECCIÓN 2: ARQUITECTURA (Maquetación Editorial Dividida) */
     .arquitectura {
-        padding: 150px 60px; /* Altura natural y márgenes laterales de contención */
+        padding: 150px 60px; 
     }
     
     .arquitectura .contenedor-seccion {
@@ -433,27 +432,11 @@ body {
         gap: 60px;
     }
 
-        .arquitectura .cabecera-seccion {
+    .arquitectura .cabecera-seccion {
         flex: 1;
         max-width: 55%; 
-        position: relative; /* 👈 Necesario para anclar el nuevo adorno */
+        position: relative; /* CRUCIAL PARA SOSTENER LA FIRMA G.MK */
     }
-
-    /* 👈 AÑADE ESTE BLOQUE NUEVO JUSTO DEBAJO */
-    /* ADORNO MARCA DE AGUA (SOLO EN ESCRITORIO) */
-    .arquitectura .cabecera-seccion::after {
-        content: "{ }"; /* Símbolo de código. Puedes cambiarlo por "&" o una "M" */
-        position: absolute;
-        left: 0;
-        bottom: -110px; /* Lo empuja exactamente al centro del espacio vacío */
-        font-family: var(--fuente-titulos);
-        font-size: 14rem; /* Tamaño gigante */
-        color: var(--texto-negro);
-        opacity: 0.03; /* Transparencia extrema para que sea sutil y elegante */
-        letter-spacing: -15px;
-        pointer-events: none; /* Hace que el ratón lo ignore y no interfiera */
-    }
-
 
     .titulo-seccion {
         font-size: 2.4rem;
@@ -473,9 +456,35 @@ body {
         border-left: 2px solid var(--acento-bronce);
     }
 
+    /* ADORNO FIRMA DE AUTOR (G .MK) */
+    .firma-agua {
+        position: absolute; 
+        left: 0;
+        margin-top: 60px; 
+        display: flex;
+        align-items: baseline; 
+        font-family: var(--fuente-titulos);
+        color: var(--texto-negro);
+        opacity: 0.05; 
+        pointer-events: none; 
+        user-select: none;
+    }
+
+    .letra-g {
+        font-size: 18rem; 
+        line-height: 0.7; 
+        font-style: italic; 
+    }
+
+    .letras-mk {
+        font-size: 6rem; 
+        margin-left: 5px; 
+        letter-spacing: -2px;
+    }
+
     /* SECCIÓN 3: PROYECTOS (Cuadrícula Avanzada de Doble Columna) */
     .seccion-proyectos {
-        padding: 150px 60px; /* Altura natural y márgenes laterales de contención */
+        padding: 150px 60px; 
     }
 
     .galeria-minimalista {
@@ -504,7 +513,7 @@ body {
 
     /* SECCIÓN 4: CONTACTO (Espaciado Ejecutivo) */
     .seccion-contacto {
-        padding: 150px 60px 80px 60px; /* Márgenes simétricos para cerrar la página */
+        padding: 150px 60px 80px 60px; 
     }
 
     .titulo-contacto {
@@ -526,4 +535,3 @@ body {
         font-size: 0.9rem;
     }
 }
-
