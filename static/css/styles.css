@@ -433,10 +433,27 @@ body {
         gap: 60px;
     }
 
-    .arquitectura .cabecera-seccion {
+        .arquitectura .cabecera-seccion {
         flex: 1;
         max-width: 55%; 
+        position: relative; /* 👈 Necesario para anclar el nuevo adorno */
     }
+
+    /* 👈 AÑADE ESTE BLOQUE NUEVO JUSTO DEBAJO */
+    /* ADORNO MARCA DE AGUA (SOLO EN ESCRITORIO) */
+    .arquitectura .cabecera-seccion::after {
+        content: "{ }"; /* Símbolo de código. Puedes cambiarlo por "&" o una "M" */
+        position: absolute;
+        left: 0;
+        bottom: -110px; /* Lo empuja exactamente al centro del espacio vacío */
+        font-family: var(--fuente-titulos);
+        font-size: 14rem; /* Tamaño gigante */
+        color: var(--texto-negro);
+        opacity: 0.03; /* Transparencia extrema para que sea sutil y elegante */
+        letter-spacing: -15px;
+        pointer-events: none; /* Hace que el ratón lo ignore y no interfiera */
+    }
+
 
     .titulo-seccion {
         font-size: 2.4rem;
