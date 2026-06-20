@@ -33,5 +33,13 @@ LISTA_PROYECTOS = [
         "enlace": "https://mkgondres.github.io/Sonrisa-delujo/"
     }
 
+    {
+          "id": 5,
+        "titulo": "Aura Estates: Ecosistema de Inversión Inmobiliaria High-End",
+        "descripcion": "Diseño y desarrollo de una plataforma inmobiliaria orientada a la venta de activos exclusivos (high-ticket). El proyecto implementa una arquitectura de sitio enfocada en el storytelling (Manifiesto de Marca), gestión avanzada de estados de inventario (Disponibles vs. Vendidas) para generar escasez, y un sistema de captación de leads premium con validaciones asíncronas. Desarrollado con técnicas de scroll-driven animation y una interfaz responsiva enfocada en la conversión de clientes de alto patrimonio.",
+        "tecnologias": ["CSS3 avanzado (Flexbox/Grid)", "Intersection Observer API", "Copywriting de Conversión", "Formularios VIP Asíncronos"],
+        "enlace": "https://mkgondres.github.io/Condominio/"
+    }
+
 ]
 
