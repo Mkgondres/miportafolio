@@ -17,5 +17,13 @@ LISTA_PROYECTOS = [
         "enlace": "https://mkgondres.github.io/Portafolio/"
     }
 
+    {
+          "id": 3,
+        "titulo": "Plataforma E-Commerce Premium & Motor de Carrito (Vanilla JS)",
+        "descripcion": "Desarrollo completo de una tienda online high-ticket orientada al mercado latinoamericano. Arquitectura Frontend construida sin librerías externas, destacando un motor de carrito de compras persistente mediante Local Storage, renderizado dinámico del DOM, y un flujo de checkout con validación algorítmica de datos financieros en tiempo real (Regex). Interfaz diseñada con CSS variables, layouts en Grid y manipulación avanzada del DOM mediante delegación de eventos.",
+        "tecnologias": ["JavaScript Avanzado (ES6+)", "State Management (Local Storage)", "Regex Validation", "CSS Grid & Variables"],
+        "enlace": "https://mkgondres.github.io/Tienda-online/"  
+    }
+
 ]
 
