@@ -357,22 +357,22 @@ body {
 }
 
 
-/* ==========================================================================
+    /* ==========================================================================
    INTERRUPTOR RESPONSIVO: OPTIMIZACIÓN COMPLETA PARA COMPUTADORAS (ESCRITORIO)
    ========================================================================== */
 @media (min-width: 900px) {
     
-    /* REGLA MAESTRA DE ANCHO PARA ESCRITORIO */
+    /* REGLA MAESTRA DE ANCHO Y MÁRGENES PARA ESCRITORIO */
     .contenedor-seccion {
         max-width: 1140px; 
-        padding: 0 20px;
+        padding: 0 60px; /* Los 60px de aire lateral para que la letra no toque el borde */
     }
 
     /* SECCIÓN 1: INICIO (Paralelo: Foto Izquierda, Texto Derecha) */
     .hero {
         text-align: left;
-        padding: 150px 0; /* Más aire vertical */
-        min-height: auto; /* Eliminamos el estiramiento forzado */
+        padding: 150px 60px; /* Margen lateral en la portada y altura natural */
+        min-height: auto; /* Evita que el celular estire la página */
     }
 
     .hero-contenido {
@@ -380,6 +380,8 @@ body {
         justify-content: space-between;
         align-items: center;
         gap: 80px;
+        max-width: 1140px; 
+        margin: 0 auto; /* Mantiene todo centrado en pantallas gigantes */
     }
 
     .hero-texto {
@@ -391,10 +393,12 @@ body {
         order: 1; 
     }
 
+    /* LA FOTO CON EL NUEVO EFECTO DE SOMBRA 3D */
     .hero-foto {
         width: 360px; 
         height: 480px;
         border-radius: 180px 180px 0 0; 
+        box-shadow: -25px 35px 65px rgba(0, 0, 0, 0.35); /* Sombra dramática y profunda */
     }
 
     .nombre {
@@ -418,7 +422,7 @@ body {
 
     /* SECCIÓN 2: ARQUITECTURA (Maquetación Editorial Dividida) */
     .arquitectura {
-        padding: 150px 0; /* Más aire vertical */
+        padding: 150px 60px; /* Altura natural y márgenes laterales de contención */
     }
     
     .arquitectura .contenedor-seccion {
@@ -453,7 +457,7 @@ body {
 
     /* SECCIÓN 3: PROYECTOS (Cuadrícula Avanzada de Doble Columna) */
     .seccion-proyectos {
-        padding: 150px 0; /* Más aire vertical */
+        padding: 150px 60px; /* Altura natural y márgenes laterales de contención */
     }
 
     .galeria-minimalista {
@@ -482,7 +486,7 @@ body {
 
     /* SECCIÓN 4: CONTACTO (Espaciado Ejecutivo) */
     .seccion-contacto {
-        padding: 150px 0 40px 0; /* Más aire vertical */
+        padding: 150px 60px 80px 60px; /* Márgenes simétricos para cerrar la página */
     }
 
     .titulo-contacto {
@@ -504,3 +508,4 @@ body {
         font-size: 0.9rem;
     }
 }
+
