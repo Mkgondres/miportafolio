@@ -463,13 +463,14 @@ body {
         position: relative; 
     }
 
-             /* CONTENEDOR FIRMA: ANCLADO AL FONDO IZQUIERDO */
+    /* CONTENEDOR FIRMA: Ahora es una caja invisible que ocupa toda la sección */
     .firma-agua {
-        display: flex; 
+        display: block; /* Rompemos el flex para que las letras sean libres */
         position: absolute; 
-        bottom: -50px; /* Clavado en el piso de la sección */
-        left: 0px; /* Pegado al margen izquierdo (tu círculo rojo) */
-        align-items: baseline; /* Alineación natural */
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
         pointer-events: none; 
         user-select: none;
         z-index: 0; 
@@ -477,30 +478,38 @@ body {
 
     .letra-g {
         font-family: var(--fuente-firma); 
-        font-size: 36rem; /* Tamaño colosal para llenar el vacío */
-        line-height: 0.6; /* Evita que la letra se dispare hacia arriba */
+        font-size: 38rem; 
         font-weight: normal; 
+        line-height: 0.6; 
         
-        /* BORDE ORO PURO: Relleno transparente y un contorno nítido oro */
-        color: rgba(184, 151, 94, 0.02); /* Relleno casi invisible */
-        -webkit-text-stroke: 1px rgba(184, 151, 94, 0.4); /* Línea dorada afilada */
-        text-shadow: none; /* Aniquilamos la sombra sucia */
+        /* POSICIÓN ABSOLUTA DE LA G */
+        position: absolute;
+        bottom: -50px; /* Clavada en el piso izquierdo */
+        left: -10px; 
+        
+        /* EL BORDE ORO PREMIUM */
+        color: rgba(184, 151, 94, 0.02); 
+        -webkit-text-stroke: 1px rgba(184, 151, 94, 0.4); 
+        text-shadow: none; 
     }
 
     .letras-mk {
         font-family: var(--fuente-firma); 
-        font-size: 13rem; /* Tamaño proporcional */
+        font-size: 14rem; 
         font-weight: normal; 
-        margin-left: 5px; 
+        line-height: 0.6; /* Le quitamos la caja invisible extra */
         
-        position: relative;
-        top: 60px; /* Empuja el .Mk hacia abajo, para que descanse bajo el texto */
+        /* LA MAGIA: COORDENADA INDEPENDIENTE PARA CLAVARLO AL PISO */
+        position: absolute;
+        bottom: 10px; /* 👈 Se va hasta el fondo absoluto de la sección */
+        left: 33%; /* 👈 Centrado debajo de tu texto */
         
-        /* MISMO BORDE ORO PURO */
+        /* EL MISMO BORDE ORO PREMIUM */
         color: rgba(184, 151, 94, 0.02); 
         -webkit-text-stroke: 1px rgba(184, 151, 94, 0.4);
         text-shadow: none; 
     }
+
 
 
 
