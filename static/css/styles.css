@@ -463,50 +463,47 @@ body {
         position: relative; 
     }
 
-    /* FIRMA MARCA DE AGUA: POSICIÓN INFERIOR IZQUIERDA */
+     /* FIRMA MARCA DE AGUA: POSICIÓN INFERIOR IZQUIERDA */
     .firma-agua {
         display: flex; 
         position: absolute; 
-        bottom: -50px; /* La ancla profundamente al piso de la sección */
-        left: -10px; /* Pegada a la izquierda para ocupar todo el vacío */
-        align-items: baseline; /* Alinea la G y el .Mk en el mismo renglón invisible */
-        opacity: 0.05; /* Transparencia de marca de agua */
+        bottom: -40px; 
+        left: -10px; 
+        align-items: baseline; 
+        /* Opacidad general eliminada para que el oro pueda brillar */
         pointer-events: none; 
         user-select: none;
-        z-index: 0; /* Al fondo, detrás de todo el texto */
+        z-index: 0; 
     }
 
-        .letra-g {
-        font-family: var(--fuente-firma); /* Italianno */
+    .letra-g {
+        font-family: var(--fuente-firma); 
         font-size: 38rem; 
         line-height: 0.5; 
-        color: rgba(26, 26, 26, 0.01); /* Volvemos el cuerpo de la letra casi transparente */
+        
+        /* 1. EL CUERPO ORIGINAL (Gris oscuro transparente para recuperar contraste) */
+        color: rgba(26, 26, 26, 0.04); 
         font-weight: normal; 
         
-        /* EFECTO MAESTRO DE RELIEVE ESCULPIDO CON BORDE ORO DIFUMINADO */
-        text-shadow: 
-            0 0 20px rgba(184, 151, 94, 0.25),   /* 1. El resplandor difuminado oro que pediste */
-            0 0 2px rgba(184, 151, 94, 0.35),   /* 2. Un borde oro un poco más definido para el trazo fino */
-            -1px -1px 1px rgba(255, 255, 255, 0.9), /* 3. Luz blanca arriba (crea el efecto relieve/esculpido) */
-            1px 1px 1px rgba(0, 0, 0, 0.04);     /* 4. Sombra sutil abajo para dar profundidad */
+        /* 2. EL BORDE ORO DIFUMINADO */
+        text-shadow: 0 0 15px rgba(184, 151, 94, 0.4); 
     }
 
     .letras-mk {
-        font-family: var(--fuente-firma); /* Italianno */
+        font-family: var(--fuente-firma); 
         font-size: 14rem; 
         margin-left: 5px; 
-        color: rgba(26, 26, 26, 0.01); /* Casi transparente */
+        
+        /* 1. EL CUERPO ORIGINAL */
+        color: rgba(26, 26, 26, 0.04); 
         font-weight: normal; 
         position: relative;
         top: 100px; 
         
-        /* EL MISMO EFECTO DE RELIEVE EN ORO PARA EL .Mk */
-        text-shadow: 
-            0 0 15px rgba(184, 151, 94, 0.25),   /* Resplandor oro difuminado */
-            0 0 2px rgba(184, 151, 94, 0.35),    /* Borde oro fino */
-            -1px -1px 1px rgba(255, 255, 255, 0.9), /* Luz de relieve */
-            1px 1px 1px rgba(0, 0, 0, 0.04);     /* Sombra de relieve */
+        /* 2. EL BORDE ORO DIFUMINADO */
+        text-shadow: 0 0 12px rgba(184, 151, 94, 0.4); 
     }
+
 
 
     /* PROYECTOS */
