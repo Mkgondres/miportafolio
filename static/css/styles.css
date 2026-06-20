@@ -1,9 +1,9 @@
 /* ==========================================================================
-   PORTAFOLIO EDITORIAL PREMIUM - HOJA DE ESTILOS MAESTRA RECONSTRUIDA
-   ========================================================================== */
+   PORTAFOLIO EDITORIAL PREMIUM - HOJA DE ESTILOS MAESTRA UNIFICADA
+   ========================================================================= */
 
-/* IMPORTACIÓN DE FUENTE CALIGRÁFICA ANTIGUA PARA LA "G" */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+/* IMPORTACIÓN DE FUENTE DE CARTA ANTIGUA ORNAMENTADA (MONSIEUR LA DOULAISE) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Monsieur+La+Doulaise&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* 1. VARIABLES Y CONFIGURACIÓN CROMÁTICA */
 :root {
@@ -14,7 +14,9 @@
     
     --fuente-titulos: 'Playfair Display', serif; 
     --fuente-textos: 'Montserrat', sans-serif; 
-    --fuente-firma: 'Great Vibes', cursive; /* La nueva fuente antigua */
+    
+    /* CAMBIO DE FUENTE: DE GREAT VIBES A MONSIEUR LA DOULAISE PARA MÁS ANTIGÜEDAD */
+    --fuente-firma: 'Monsieur La Doulaise', cursive; 
 }
 
 /* 2. RESETEO E INTERFAZ BASE (Móvil Primero) */
@@ -32,7 +34,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Contenedor global responsivo para el cuerpo de la página */
 .contenedor-seccion {
     width: 100%;
     max-width: 650px; 
@@ -72,7 +73,7 @@ body {
     height: 270px;
     object-fit: cover;
     border-radius: 100px 100px 0 0;
-    box-shadow: -15px 25px 45px rgba(0, 0, 0, 0.35); 
+    box-shadow: -15px 25px 45px rgba(0, 0, 0, 0.35); /* SOMBRA 3D MÓVIL */
     border-bottom: 4px solid var(--acento-bronce);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -129,14 +130,18 @@ body {
     font-weight: 600;
 }
 
-/* SECCIÓN 2: ARQUITECTURA Y HABILIDADES */
+/* ARQUITECTURA MÓVIL */
 .arquitectura {
     background-color: var(--fondo-crema);
     padding: 70px 20px;
 }
-
-.cabecera-seccion {
-    margin-bottom: 25px;
+.grid-arquitectura {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.firma-agua {
+    display: none; /* Oculta en celular por falta de espacio visual */
 }
 
 .titulo-seccion {
@@ -151,11 +156,6 @@ body {
     width: 40px;
     height: 3px;
     background-color: var(--acento-bronce);
-}
-
-/* Ocultar firma en móvil por espacio */
-.firma-agua {
-    display: none; 
 }
 
 .texto-filosofia {
@@ -187,7 +187,7 @@ body {
     margin: 0 6px;
 }
 
-/* SECCIÓN 3: PROYECTOS */
+/* PROYECTOS */
 .seccion-proyectos {
     background-color: var(--fondo-blanco);
     padding: 70px 20px;
@@ -253,7 +253,7 @@ body {
     color: var(--acento-bronce);
 }
 
-/* SECCIÓN 4: CONTACTO & FOOTER */
+/* CONTACTO */
 .seccion-contacto {
     background-color: var(--texto-negro);
     color: var(--fondo-blanco);
@@ -319,7 +319,6 @@ body {
     letter-spacing: 1px;
 }
 
-
 /* LIGHTBOX */
 .lightbox {
     display: none;
@@ -366,8 +365,8 @@ body {
 }
 
 /* ==========================================================================
-   INTERRUPTOR RESPONSIVO: OPTIMIZACIÓN COMPLETA PARA COMPUTADORAS (ESCRITORIO)
-   ========================================================================== */
+   INTERRUPTOR RESPONSIVO: OPTIMIZACIÓN COMPLETA PARA ESCRITORIO
+   ========================================================================= */
 @media (min-width: 900px) {
     
     .contenedor-seccion {
@@ -375,7 +374,7 @@ body {
         padding: 0 60px; 
     }
 
-    /* INICIO */
+    /* INICIO ESCRITORIO */
     .hero {
         text-align: left;
         padding: 150px 60px; 
@@ -400,6 +399,7 @@ body {
         order: 1; 
     }
 
+    /* SOMBRA 3D PROFUNDA EN ESCRITORIO */
     .hero-foto {
         width: 360px; 
         height: 480px;
@@ -426,73 +426,74 @@ body {
         margin-top: 35px;
     }
 
-    /* SECCIÓN ARQUITECTURA */
+    /* SECCIÓN ARQUITECTURA (3 Columnas Exactas y Firma) */
     .arquitectura {
         padding: 150px 60px; 
     }
     
-    .arquitectura .contenedor-seccion {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 80px; /* Separación garantizada entre texto y cuadro */
+    .grid-arquitectura {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr 1.2fr; /* Columna 1 (Título), Columna 2 (Texto), Columna 3 (Habilidades) */
+        gap: 60px; 
+        align-items: start;
+        position: relative;
+        z-index: 1; /* Protege el texto de lectura sobre la firma */
     }
 
-    .arquitectura .cabecera-seccion {
-        width: 55%; /* Fuerza al texto a mantenerse ancho */
-        position: relative; 
-        z-index: 1; /* Protege el texto de la firma */
+    .cabecera-seccion {
+        position: relative; /* Clave para el anclaje de la G */
     }
 
     .titulo-seccion {
         font-size: 2.4rem;
+        margin-bottom: 10px;
     }
 
     .texto-filosofia {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         line-height: 1.8;
-        margin-bottom: 0; 
+        margin-top: -5px; /* Alineación óptica con el título */
+        margin-bottom: 0; /* Limpieza de márgenes heredados */
     }
 
-    /* FIRMA DE AGUA CON NUEVA FUENTE ANTIGUA */
+    .contenedor-habilidades {
+        background: rgba(184, 151, 94, 0.03); 
+        padding: 35px;
+        border-left: 2px solid var(--acento-bronce);
+        margin-top: -20px;
+        width: auto;
+    }
+
+    /* FIRMA DE AUTOR G .MK: POSICIONAMIENTO MILIMÉTRICO */
     .firma-agua {
-        display: flex; /* La activamos en PC */
+        display: flex; 
         position: absolute; 
-        left: 5%; /* La mueve un poco a la derecha */
-        top: 60%; /* La desliza hacia abajo */
-        transform: translateY(-50%); /* Centrado exacto */
-        align-items: baseline; 
+        top: 240px; /* Deslizada al gran espacio vacío izquierdo */
+        left: 20px; /* Alineada bajo el título */
+        align-items: center; 
         color: var(--texto-negro);
-        opacity: 0.05; /* Transparencia de marca de agua */
+        opacity: 0.04; /* Transparencia de marca de agua */
         pointer-events: none; 
         user-select: none;
-        z-index: -1; /* La manda estrictamente al fondo */
+        z-index: 0; /* Mandada estrictamente al fondo */
     }
 
     .letra-g {
-        font-family: var(--fuente-firma); /* FUENTE DE CARTA ANTIGUA */
-        font-size: 24rem; /* Tamaño gigante */
-        line-height: 0.5; /* Evita que rompa el contenedor */
+        font-family: var(--fuente-firma); /* FUENTE DE CARTA ANTIGUA ORNAMENTADA */
+        font-size: 32rem; /* Tamaño monumental llenando el hueco */
+        line-height: 0.5; 
         font-weight: normal; 
     }
 
     .letras-mk {
         font-family: var(--fuente-titulos);
-        font-size: 5rem; /* Tamaño sutil para contraste */
-        margin-left: 15px; 
+        font-size: 6rem; 
+        margin-left: 110px; /* Empujada a la derecha, debajo de la columna del texto central */
+        margin-top: 50px; /* Ajuste visual con la G monumental */
         letter-spacing: -2px;
     }
 
-    /* CONTENEDOR HABILIDADES */
-    .contenedor-habilidades {
-        width: 38%; /* Fuerza a las habilidades a no invadir */
-        background: rgba(184, 151, 94, 0.03); 
-        padding: 40px;
-        border-left: 2px solid var(--acento-bronce);
-        z-index: 1;
-    }
-
-    /* SECCIÓN PROYECTOS */
+    /* PROYECTOS */
     .seccion-proyectos {
         padding: 150px 60px; 
     }
